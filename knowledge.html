@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="knowlegeStyle.css">
+    <title></title>
+  </head>
+  <body>
+
+  <div id="bgr"></div>
+
+  <div id="lake">
+    <div id="sploutch">
+      <div class="drop"></div>
+
+      <div id="ripples">
+
+          <div class="ripple"></div>
+
+      </div>
+      <div id="splashes">
+
+          <div class="splash"></div>
+
+      </div>
+    </div>
+  </div>
+  <div id="raftHolder">
+    <div id="raft">
+      <div id="raftTop"></div>
+      <div id="raftBottom"></div>
+    </div>
+  </div>
+  <div id="raftRipples">
+
+      <div class="raftRipple"></div>
+
+  </div>
+  <div id="raftReflection">
+
+      <div class="raftReflectionSegment"></div>
+
+  </div>
+  <div class="navbar">
+      <a href="table-of-content.html">TABLE OF CONTENT</a>
+      <a href="about.html">ABOUT</a>
+      <a href="aspiration.html">ASPIRATIONS</a>
+      <a href="hobbies.html">HOBBIES</a>
+      <a href="resume.html">RESUME</a>
+      <a href="poetry.html">POETRY</a>
+      <a class="active" href="knowledge.html">EDUCATION</a>
+      <a href="me.html">ME</a>
+  </div>
+  <div class="instructions">
+    <article class="">
+      Some of the classes I have taken so far and the things I have learned are..
+    </article>
+    <br/>
+    <li>Artificial Intelligence</li>
+    <li>Mobile Programming with Android</li>
+    <li>Information Structures with python</li>
+    <li>Web Development</li>
+    <li>Natural language processing</li>
+    <li>How challenging graduate program can be.</li> <br/>
+    <div class="social-menu">
+        <ul>
+            <li><a href="https://github.com/adonkor/portfolio" target="blank"><i class="fab fa-github"></i></i></a></li>
+            <li><a href="https://www.linkedin.com/in/ato-donkor-24bab5bb/" target="blank"><i class="fab fa-linkedin-in"></i></a></li>
+
+        </ul>
+    </div>
+
+  </div>
+<script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+var HEIGHT,WIDTH;
+var lake = document.getElementById("lake");
+window.addEventListener('resize', handleResize, false);
+handleResize();
+
+function handleResize(){
+HEIGHT = window.innerHeight,
+WIDTH = window.innerWidth;
+}
+
+onmousedown = function(event){
+createRipples(event.pageX, event.pageY);
+}
+
+function createRipples(x,y){
+var tx = x || Math.random()*WIDTH;
+var ty = y || (Math.random()+.5)*HEIGHT*.5;
+var spltch = document.getElementById("sploutch");
+var cln = spltch.cloneNode(true);
+cln.style.left=(tx-150) +"px";
+cln.style.top=(ty-150) +"px";
+lake.appendChild(cln);
+// remove it from the dom after a while
+setTimeout(function(){
+  lake.removeChild(cln);
+}, 4000);
+}
+
+setInterval(createRipples, 300);
+
+</script>
+  </body>
+</html>

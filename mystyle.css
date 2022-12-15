@@ -1,0 +1,127 @@
+h1 {
+  display: block;
+  text-align: center;
+  font-family: monospace;
+}
+body{
+   background-color: #92a8d1;
+}
+
+.text-details{
+  margin: auto;
+  font-size:20px;
+  font-family: monospace;
+}
+
+.text-details img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.table-content-style, td, th{
+
+   border: 1px solid;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.navbar a {
+  float:left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: monospace;
+  width: 22%; /* Four links of equal widths */
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.navbar a.active {
+  background-color: #04AA6D;
+}
+
+.about-div-2{
+   font-size: 18px;
+   font-family:monospace;
+}
+
+.about-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+}
+.about-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.about-column {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.about-column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+.aspiration-article{
+  font-family: monospace;
+  font-size: 18px;
+}
+.aspiration-column {
+ float: left;
+ width: 33.33%;
+ padding: 5px;
+}
+
+/* Clear floats after image containers */
+.aspiration-row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.aspiration-row {
+  display: flex;
+}
+
+.aspiration-column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+.hobbies-div-1{
+  font-family: monospace;
+  font-size: 18px;
+}
+
+.hobbies-div-2 img,iframe,article{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 500px) {
+  .aspiration-column {
+    width: 100%;
+  }
+}
