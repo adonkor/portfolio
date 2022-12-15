@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="meStyle.css">
+    <title></title>
+  </head>
+
+  <body>
+
+  <div id="app">
+
+    <div class="context">
+       <h1>Hover The Mouse On the Images Below</h1>
+
+      </div>
+
+      <div class="area" >
+                 <ul class="circles">
+                         <li></li>
+                         <li></li>
+                         <li></li>
+                         <li></li>
+                         <li></li>
+                         <li></li>
+                         <li></li>
+                         <li></li>
+                         <li></li>
+                         <li></li>
+                 </ul>
+         </div >
+
+
+         <div class="area">
+           <div class="navbar">
+             <a href="table-of-content.html">TABLE OF CONTENT</a>
+             <a  href="about.html">ABOUT</a>
+             <a href="aspiration.html">ASPIRATIONS</a>
+             <a href="hobbies.html">HOBBIES</a>
+             <a href="resume.html">RESUME</a>
+             <a href="poetry.html">POETRY</a>
+             <a href="knowledge.html">EDUCATION</a>
+             <a class="active" href="me.html">ME</a>
+           </div>
+           <div class="row">
+             <div >
+               <img class="image-1" :src="myImage1" @mouseover="myImage1 = myImage4" @mouseleave="resetImage" />
+             </div>
+             <div >
+               <img class="image-1" :src="myImage2" @mouseover="myImage2 = myImage3"/>
+             </div>
+
+           </div>
+         </div>
+
+
+   </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+
+    let app = Vue.createApp({
+          data: function(){
+            return {
+      myImage1: "media/pic1.JPG",
+      myImage2: "media/pic2.JPG",
+      myImage3: "media/pic3.JPG",
+      myImage4: "media/pic4.JPG"
+    }
+  }
+})
+
+
+app.mount('#app')
+</script>
+  </body>
+</html>
